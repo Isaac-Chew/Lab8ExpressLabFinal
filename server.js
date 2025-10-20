@@ -10,8 +10,6 @@ const app = express();
 app.use(express.json());
 // Middleware to log various examples of request properties
 app.use((req, res, next) => {
-console.log(`${req.method} `);
-console.log(`${req.method} ${req.url} `);
 console.log(`${req.method} request made at ${req.url} -- Body: ${JSON.stringify(req.body)} `);
 next();
 });
